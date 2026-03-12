@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backline | CS185</title>
+    <meta
+      name="description"
+      content="Backline is a CS185 project exploring just-in-time support for retail fulfillment workers under timer pressure."
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="site-header">
+      <a class="brand" href="#top">Backline</a>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#problem">Problem</a>
+        <a href="#research">Research</a>
+        <a href="#solution">Solution</a>
+        <a href="#deliverables">Deliverables</a>
+        <a href="#team">Team</a>
+      </nav>
+    </header>
+
+    <main id="top">
+      <section class="hero">
+        <div class="hero-copy">
+          <p class="eyebrow">CS185 Winter 2026</p>
+          <h1>Just-in-time support for retail fulfillment workers under timer pressure.</h1>
+          <p class="hero-text">
+            Backline helps newer retail fulfillment workers recover from missing items,
+            customer interruptions, and uncertainty-heavy decisions without losing pace or confidence.
+          </p>
+          <div class="hero-actions">
+            <a class="button primary" href="#deliverables">View Deliverables</a>
+            <a class="button secondary" href="#research">See Research</a>
+          </div>
+        </div>
+        <div class="hero-panel">
+          <div class="panel-card status-card">
+            <p class="panel-label">Core Tensions</p>
+            <ul>
+              <li>Speed vs accuracy</li>
+              <li>Training vs real shift judgment</li>
+              <li>Help-seeking vs looking competent</li>
+            </ul>
+          </div>
+          <div class="panel-card quote-card">
+            <p class="panel-label">Research Signal</p>
+            <p class="quote">
+              “People might think it’s just grabbing groceries off shelves. But you’re constantly
+              deciding substitutions, figuring out where things actually are, and balancing speed with getting the order right.”
+            </p>
+            <p class="quote-source">Jordan, retail fulfillment associate</p>
+          </div>
+        </div>
+      </section>
+
+      <section class="section" id="problem">
+        <div class="section-heading">
+          <p class="eyebrow">Problem</p>
+          <h2>Retail fulfillment looks simple from the outside, but the real work is recovery.</h2>
+        </div>
+        <div class="grid two">
+          <article class="card">
+            <h3>What workers face</h3>
+            <p>
+              Retail fulfillment associates are expected to move quickly, stay accurate, and remain calm
+              in public-facing environments. The hardest moments are not routine picks, but breakdown
+              moments: a missing item, a risky substitution, a customer interruption, or uncertainty about
+              whether to ask for help.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Why existing training falls short</h3>
+            <p>
+              Our research showed that formal training covers scanner mechanics and workflow basics, but
+              does not prepare workers for live judgment under pressure. Experience builds speed because it
+              builds unofficial knowledge, not because workers simply move faster.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="research">
+        <div class="section-heading">
+          <p class="eyebrow">Research</p>
+          <h2>We narrowed from broad service work to timer-driven retail fulfillment.</h2>
+        </div>
+        <div class="grid three">
+          <article class="card stat-card">
+            <p class="stat">2</p>
+            <p class="stat-label">GR2 interviewees</p>
+            <p class="stat-note">A newer picker and an experienced fulfillment lead</p>
+          </article>
+          <article class="card stat-card">
+            <p class="stat">5</p>
+            <p class="stat-label">key insights</p>
+            <p class="stat-note">Focused on judgment, help-seeking, interruptions, and hidden expertise</p>
+          </article>
+          <article class="card stat-card">
+            <p class="stat">3</p>
+            <p class="stat-label">core tasks</p>
+            <p class="stat-note">Missing-item recovery, escalation, and interruption recovery</p>
+          </article>
+        </div>
+        <div class="grid two research-notes">
+          <article class="card">
+            <h3>Interview highlights</h3>
+            <ul class="list">
+              <li>Training taught mechanics, not judgment.</li>
+              <li>Help-seeking is both socially and operationally costly.</li>
+              <li>Interruptions break mental flow and increase recovery time.</li>
+              <li>Experienced workers rely on unofficial store knowledge.</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Selected POV</h3>
+            <p>
+              A newer retail fulfillment associate who wants to keep pace and look competent needs fast
+              support for ambiguous edge-case decisions because training covers the official process, but
+              real performance depends on judgment, timing, and knowing when to escalate.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="solution">
+        <div class="section-heading">
+          <p class="eyebrow">Solution Direction</p>
+          <h2>Backline supports workers in the exact moments where they are most likely to hesitate.</h2>
+        </div>
+        <div class="feature-stack">
+          <article class="feature">
+            <div class="feature-index">01</div>
+            <div>
+              <h3>Edge-case decision support</h3>
+              <p>
+                A phone-first support flow for missing items and substitutions that helps workers make
+                fast, higher-confidence decisions without guessing.
+              </p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature-index">02</div>
+            <div>
+              <h3>Low-friction escalation</h3>
+              <p>
+                A contextual help flow that makes asking for support feel efficient instead of
+                competence-threatening.
+              </p>
+            </div>
+          </article>
+          <article class="feature">
+            <div class="feature-index">03</div>
+            <div>
+              <h3>Interruption recovery</h3>
+              <p>
+                A resume flow that preserves task context when customers interrupt an active order.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section alt" id="deliverables">
+        <div class="section-heading">
+          <p class="eyebrow">Deliverables</p>
+          <h2>Project development and course deliverables.</h2>
+        </div>
+        <div class="deliverables-grid">
+          <article class="deliverable-card complete">
+            <p class="deliverable-tag">GR1</p>
+            <h3>Needfinding</h3>
+            <p>Initial domain exploration across public-facing service jobs under pressure.</p>
+            <a href="#" aria-disabled="true">Add slide link</a>
+          </article>
+          <article class="deliverable-card in-progress">
+            <p class="deliverable-tag">GR2</p>
+            <h3>Additional Needfinding + POVs</h3>
+            <p>Narrowed to retail fulfillment, built POVs, HMWs, and experience prototype plans.</p>
+            <a href="#" aria-disabled="true">Add slide link</a>
+          </article>
+          <article class="deliverable-card">
+            <p class="deliverable-tag">GR4</p>
+            <h3>Concept Video</h3>
+            <p>Story-driven presentation of the product concept and core tasks.</p>
+            <a href="#" aria-disabled="true">Add slides / video</a>
+          </article>
+          <article class="deliverable-card">
+            <p class="deliverable-tag">GR5</p>
+            <h3>Low-Fi Prototype + Testing</h3>
+            <p>Sketching, paper prototyping, and usability testing artifacts.</p>
+            <a href="#" aria-disabled="true">Add deliverables</a>
+          </article>
+          <article class="deliverable-card">
+            <p class="deliverable-tag">GR6</p>
+            <h3>Medium-Fi Prototype</h3>
+            <p>Interactive prototype, README, and revised task flows.</p>
+            <a href="#" aria-disabled="true">Add prototype / README</a>
+          </article>
+          <article class="deliverable-card">
+            <p class="deliverable-tag">GR7/8</p>
+            <h3>Heuristic Evaluation + High-Fi</h3>
+            <p>Evaluation synthesis and polished interactive prototype.</p>
+            <a href="#" aria-disabled="true">Add links</a>
+          </article>
+          <article class="deliverable-card">
+            <p class="deliverable-tag">GR9</p>
+            <h3>Poster, Pitch, Demo</h3>
+            <p>Expo-ready project communication and final demo materials.</p>
+            <a href="#" aria-disabled="true">Add poster / video</a>
+          </article>
+          <article class="deliverable-card">
+            <p class="deliverable-tag">GR10</p>
+            <h3>Final Report</h3>
+            <p>Complete written narrative of the design process and project evolution.</p>
+            <a href="#" aria-disabled="true">Add report link</a>
+          </article>
+        </div>
+      </section>
+
+      <section class="section" id="team">
+        <div class="section-heading">
+          <p class="eyebrow">Team</p>
+          <h2>Built by a two-person team focused on research-driven product direction.</h2>
+        </div>
+        <div class="grid two">
+          <article class="card">
+            <h3>Aryaman S.</h3>
+            <p>Needfinding, interaction design, prototyping, deck development</p>
+          </article>
+          <article class="card">
+            <h3>Kushagra K.</h3>
+            <p>Research synthesis, concept development, testing, design rationale</p>
+          </article>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Backline · CS185 Winter 2026</p>
+      <p>Publish this site on GitHub Pages and replace placeholder links as deliverables are completed.</p>
+    </footer>
+  </body>
+</html>
