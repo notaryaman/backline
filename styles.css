@@ -368,6 +368,12 @@ h3 {
   margin-top: auto;
   color: var(--accent-dark);
   font-weight: 700;
+  text-decoration: none;
+  transition: opacity 0.2s ease;
+}
+
+.deliverable-card a:hover {
+  opacity: 0.6;
 }
 
 .site-footer {
