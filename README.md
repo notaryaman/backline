@@ -99,7 +99,7 @@ backline/
 - **Course:** CS 185 - Human-Computer Interaction
 - **Institution:** UC Santa Barbara
 - **Quarter:** Winter 2026
-- **Team:** Aman Notary, Kush Upadhyay, Eshan Singhal, Rishi Meka
+- **Team:** Kushagra Kanaujia, Aryaman Singh
 
 ---
 
@@ -145,10 +145,8 @@ This project was created for educational purposes as part of CS 185 at UCSB.
 
 ## 👥 Team
 
-- **Aman Notary** - Lead Designer & Researcher
-- **Kush Upadhyay** - UX Designer & Developer
-- **Eshan Singhal** - Researcher & Content Designer
-- **Rishi Meka** - Designer & Video Producer
+- **Kushagra Kanaujia**
+- **Aryaman Singh**
 
 ---
 
@@ -159,4 +157,4 @@ This project was created for educational purposes as part of CS 185 at UCSB.
 
 ---
 
-Made with ❤️ for CS 185 at UC Santa Barbara
+CS 185 at UC Santa Barbara
