@@ -376,6 +376,134 @@ h3 {
   opacity: 0.6;
 }
 
+/* Interactive features */
+
+/* Scroll reveal animations */
+.deliverable-card,
+.card,
+.feature,
+.panel-card {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.fade-in-up {
+  opacity: 1 !important;
+  transform: translateY(0) !important;
+}
+
+/* Active navigation */
+.site-nav a.active {
+  color: var(--accent-dark);
+  position: relative;
+}
+
+.site-nav a.active::after {
+  content: '';
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--accent-dark);
+}
+
+.site-nav a {
+  transition: color 0.2s ease;
+  position: relative;
+}
+
+/* Header scroll effect */
+.site-header {
+  transition: background-color 0.3s ease, backdrop-filter 0.3s ease;
+}
+
+.site-header.scrolled {
+  background-color: rgba(244, 239, 232, 0.95);
+  box-shadow: 0 2px 12px rgba(35, 29, 24, 0.08);
+}
+
+/* Card hover effects */
+.deliverable-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+  cursor: pointer;
+  position: relative;
+  overflow: hidden;
+}
+
+.deliverable-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 24px 48px rgba(35, 29, 24, 0.15);
+}
+
+/* Card click expand effect */
+.deliverable-card.expanded {
+  transform: scale(1.02);
+  z-index: 10;
+  box-shadow: 0 32px 64px rgba(35, 29, 24, 0.2);
+}
+
+/* Ripple effect */
+.ripple {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(227, 106, 45, 0.3);
+  pointer-events: none;
+  transform: scale(0);
+  animation: ripple-animation 0.6s ease-out;
+}
+
+@keyframes ripple-animation {
+  to {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
+/* Card and feature base styles */
+.card,
+.feature {
+  transition: transform 0.3s ease, opacity 0.6s ease;
+}
+
+.card:hover {
+  transform: translateY(-4px);
+}
+
+/* Panel card hover */
+.panel-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease, opacity 0.6s ease;
+}
+
+.panel-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 24px 48px rgba(35, 29, 24, 0.12);
+}
+
+/* Button effects */
+.button {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.button:hover {
+  transform: translateY(-2px);
+}
+
+.button.primary:hover {
+  box-shadow: 0 24px 48px rgba(227, 106, 45, 0.3);
+}
+
+.button.secondary:hover {
+  background: rgba(255, 255, 255, 0.7);
+}
+
+/* Loading state for links */
+a.loading {
+  opacity: 0.5;
+  pointer-events: none;
+}
+
 .site-footer {
   max-width: var(--max-width);
   margin: 0 auto;
