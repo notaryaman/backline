@@ -15,71 +15,82 @@
   </head>
   <body>
     <main class="canvas poster-canvas">
-      <section class="poster-showcase">
-        <div class="poster-orbit orbit-left"></div>
-        <div class="poster-orbit orbit-right"></div>
-
-        <header class="showcase-header">
-          <div>
+      <section class="poster-board">
+        <header class="poster-header">
+          <div class="poster-header-copy">
             <p class="eyebrow">CS185 Winter 2026</p>
             <h1>Backline</h1>
-            <p class="showcase-subtitle">Just-in-time support for retail fulfillment workers when the floor gets hectic.</p>
+            <p class="poster-deck">
+              Just-in-time support for retail fulfillment workers during missing items,
+              escalation moments, and customer interruptions.
+            </p>
           </div>
-          <div class="showcase-badge">GR9</div>
+          <div class="poster-meta">
+            <div class="poster-meta-chip">GR9 Poster</div>
+            <p><strong>Aryaman Singh</strong> and <strong>Kushagra Kanaujia</strong></p>
+            <p>University of California, Santa Barbara</p>
+          </div>
         </header>
 
-        <section class="showcase-main">
-          <article class="showcase-copy">
-            <div class="story-card intro-card">
-              <p class="section-kicker">Why it matters</p>
-              <h2>Retail fulfillment breaks down in the recovery moments.</h2>
-              <p>Training covers the official workflow, but real shift performance depends on what workers do when an item is missing, a customer interrupts, or help feels socially costly.</p>
+        <section class="poster-takeaway">
+          <p class="section-kicker">Key takeaway</p>
+          <h2>The hardest part of retail fulfillment is not picking items. It is recovering when the plan breaks.</h2>
+        </section>
+
+        <section class="poster-columns">
+          <article class="poster-panel">
+            <p class="section-kicker">Problem</p>
+            <h2>Breakdown moments create hidden work.</h2>
+            <p>
+              Formal training explains scanner mechanics and official workflow, but newer workers still
+              lose time and confidence when an item is missing, when a substitute is risky, or when
+              a customer interruption wipes out task context.
+            </p>
+
+            <div class="poster-metrics">
+              <div class="poster-metric">
+                <strong>2</strong>
+                <span>Interviews</span>
+              </div>
+              <div class="poster-metric">
+                <strong>3</strong>
+                <span>Recovery flows</span>
+              </div>
+              <div class="poster-metric">
+                <strong>1</strong>
+                <span>Focused support tool</span>
+              </div>
             </div>
 
-            <div class="signal-list">
-              <div class="signal-item">
-                <span class="signal-mark">01</span>
+            <div class="poster-insight-list">
+              <div class="poster-insight">
+                <span>01</span>
                 <div>
                   <h3>Timer pressure changed behavior</h3>
-                  <p>Workers optimized for pace even when uncertainty was high.</p>
+                  <p>Workers optimized for pace even when uncertainty stayed high.</p>
                 </div>
               </div>
-              <div class="signal-item">
-                <span class="signal-mark">02</span>
+              <div class="poster-insight">
+                <span>02</span>
                 <div>
-                  <h3>Help-seeking felt expensive</h3>
-                  <p>Asking for help carried both social friction and workflow friction.</p>
+                  <h3>Help-seeking felt costly</h3>
+                  <p>Asking for help carried both workflow friction and social friction.</p>
                 </div>
               </div>
-              <div class="signal-item">
-                <span class="signal-mark">03</span>
+              <div class="poster-insight">
+                <span>03</span>
                 <div>
-                  <h3>Interruptions caused loss of context</h3>
-                  <p>Once pulled away, workers had to reconstruct the task from memory.</p>
+                  <h3>Interruptions erased context</h3>
+                  <p>Workers had to reconstruct the task from memory after helping customers.</p>
                 </div>
-              </div>
-            </div>
-
-            <div class="mini-stats">
-              <div class="mini-stat">
-                <strong>2</strong>
-                <span>interviews</span>
-              </div>
-              <div class="mini-stat">
-                <strong>3</strong>
-                <span>core flows</span>
-              </div>
-              <div class="mini-stat">
-                <strong>1</strong>
-                <span>focused support tool</span>
               </div>
             </div>
           </article>
 
-          <article class="showcase-device">
-            <div class="device-stage">
-              <div class="stage-wedge"></div>
-              <div class="stage-hand"></div>
+          <article class="poster-panel poster-panel-emphasis">
+            <p class="section-kicker">Final concept</p>
+            <h2>Backline turns training into live shift support.</h2>
+            <div class="poster-device">
               <article class="phone feature-phone">
                 <div class="screen-top">
                   <span>9:41</span>
@@ -90,7 +101,7 @@
                   <div class="screen-head">
                     <p class="screen-label">Active Order</p>
                     <h3>Order #1842</h3>
-                    <p>Recover quickly when something goes wrong, without losing pace or confidence.</p>
+                    <p>Recover quickly when something goes wrong without losing pace or confidence.</p>
                     <div class="chip-row">
                       <span class="chip alert">Timer low</span>
                       <span class="chip">Aisle 12</span>
@@ -100,7 +111,7 @@
                   <div class="screen-card">
                     <p class="mini-label">Current issue</p>
                     <h4>Can't find almond flour?</h4>
-                    <p>Backline offers alternate locations, substitute guidance, and escalation in one place.</p>
+                    <p>Backline provides alternate locations, substitute guidance, and escalation in one place.</p>
                   </div>
                   <div class="button-row">
                     <div class="button-pill">Recover this item</div>
@@ -109,42 +120,48 @@
                 </div>
               </article>
             </div>
-          </article>
 
-          <article class="showcase-panels">
-            <div class="story-card feature-panel">
-              <p class="section-kicker">Final solution</p>
-              <h2>Three recovery flows that keep the shift moving.</h2>
-              <ul class="feature-list">
-                <li><strong>Missing-item recovery</strong><span>Check alternate locations, compare substitutes, or mark unavailable.</span></li>
-                <li><strong>One-tap escalation</strong><span>Bundle item, aisle, timer state, and issue before asking for help.</span></li>
-                <li><strong>Interruption resume</strong><span>Pause the order and return with the right context intact.</span></li>
-              </ul>
-            </div>
-
-            <div class="story-card evolution-panel">
-              <p class="section-kicker">Design evolution</p>
-              <h2>From broad service stress to specific shift support.</h2>
-              <div class="evolution-strip">
-                <div><span>GR2</span><p>Needfinding</p></div>
-                <div><span>GR5</span><p>Low-fi</p></div>
-                <div><span>GR6</span><p>Medium-fi</p></div>
-                <div><span>GR8</span><p>High-fi</p></div>
+            <div class="poster-flow-grid">
+              <div class="poster-flow-card">
+                <h3>Missing-item recovery</h3>
+                <p>Check alternate locations, compare substitutes, or mark unavailable without over-searching.</p>
+              </div>
+              <div class="poster-flow-card">
+                <h3>Contextual escalation</h3>
+                <p>Bundle item, aisle, timer state, and issue before reaching out for support.</p>
+              </div>
+              <div class="poster-flow-card">
+                <h3>Interruption resume</h3>
+                <p>Pause, help a customer, and come back with the right section and next item intact.</p>
               </div>
             </div>
+          </article>
 
-            <div class="story-card impact-panel">
-              <p class="section-kicker">Impact</p>
-              <h2>Training becomes in-the-moment support.</h2>
-              <p>Backline helps newer associates stay accurate, recover faster, ask for help with less friction, and resume after interruptions without rebuilding the task from memory.</p>
+          <article class="poster-panel">
+            <p class="section-kicker">Process and impact</p>
+            <h2>From broad stress to precise recovery support.</h2>
+
+            <div class="poster-timeline">
+              <div><span>GR2</span><p>Needfinding focused the team on retail fulfillment judgment.</p></div>
+              <div><span>GR5</span><p>Low-fi testing clarified how workers want support in ambiguous moments.</p></div>
+              <div><span>GR6</span><p>Medium-fi flows organized alternate location, substitution, and escalation logic.</p></div>
+              <div><span>GR8</span><p>High-fi refined the in-the-moment experience for faster recovery.</p></div>
+            </div>
+
+            <div class="poster-outcome">
+              <p class="section-kicker">Outcome</p>
+              <p>
+                Backline helps newer associates stay accurate, recover faster, ask for help with less
+                hesitation, and resume after interruptions without rebuilding the task from memory.
+              </p>
+            </div>
+
+            <div class="poster-footer-note">
+              <p><strong>Project website</strong></p>
+              <p>notaryaman.github.io/backline</p>
             </div>
           </article>
         </section>
-
-        <footer class="showcase-footer">
-          <p><strong>Aryaman S.</strong> and <strong>Kushagra K.</strong></p>
-          <p><strong>Project website:</strong> notaryaman.github.io/backline</p>
-        </footer>
       </section>
     </main>
   </body>

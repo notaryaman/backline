@@ -1049,3 +1049,426 @@ p {
 .showcase-footer strong {
   color: #3f1d4f;
 }
+
+.poster-canvas {
+  background:
+    radial-gradient(circle at 10% 12%, rgba(227, 106, 45, 0.18), transparent 18%),
+    radial-gradient(circle at 88% 18%, rgba(95, 143, 89, 0.12), transparent 20%),
+    linear-gradient(180deg, #f7f1e8 0%, #f1e7da 100%);
+}
+
+.poster-board {
+  position: relative;
+  min-height: 100%;
+  padding: 44px;
+  border-radius: 32px;
+  background:
+    linear-gradient(180deg, rgba(255, 252, 247, 0.95), rgba(250, 242, 232, 0.96));
+  border: 1px solid rgba(31, 38, 38, 0.12);
+  box-shadow: var(--shadow-strong);
+  overflow: hidden;
+}
+
+.poster-board::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 20px;
+  background: linear-gradient(90deg, var(--accent-dark), var(--accent), #d6a24f, #6d8c63);
+}
+
+.poster-header,
+.poster-takeaway,
+.poster-columns {
+  position: relative;
+  z-index: 1;
+}
+
+.poster-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 32px;
+  padding-top: 16px;
+}
+
+.poster-header-copy h1 {
+  font-size: 164px;
+  color: var(--text);
+}
+
+.poster-deck {
+  max-width: 24ch;
+  margin-top: 12px;
+  color: var(--muted);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 52px;
+  line-height: 0.98;
+  text-transform: uppercase;
+}
+
+.poster-meta {
+  min-width: 360px;
+  padding: 24px 26px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.68);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.poster-meta-chip {
+  display: inline-flex;
+  align-items: center;
+  min-height: 44px;
+  padding: 0 18px;
+  border-radius: 999px;
+  background: rgba(227, 106, 45, 0.14);
+  color: var(--accent-dark);
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.poster-meta p {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1.45;
+}
+
+.poster-meta strong {
+  color: var(--text);
+}
+
+.poster-takeaway {
+  margin-top: 30px;
+  padding: 26px 30px;
+  border-radius: 28px;
+  background: linear-gradient(135deg, rgba(227, 106, 45, 0.12), rgba(255, 255, 255, 0.8));
+  border: 1px solid rgba(227, 106, 45, 0.18);
+}
+
+.poster-takeaway h2 {
+  margin-top: 10px;
+  max-width: 20ch;
+  font-size: 78px;
+  color: var(--text);
+}
+
+.poster-columns {
+  margin-top: 28px;
+  display: grid;
+  grid-template-columns: 0.92fr 1.08fr 0.92fr;
+  gap: 22px;
+  align-items: start;
+}
+
+.poster-panel {
+  padding: 24px;
+  border-radius: 28px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.poster-panel-emphasis {
+  background:
+    radial-gradient(circle at top right, rgba(227, 106, 45, 0.1), transparent 26%),
+    linear-gradient(180deg, rgba(255, 252, 247, 0.92), rgba(247, 240, 231, 0.96));
+}
+
+.poster-panel h2 {
+  margin-top: 8px;
+  font-size: 54px;
+  color: var(--text);
+}
+
+.poster-panel > p:not(.section-kicker) {
+  margin-top: 14px;
+  color: var(--muted);
+  font-size: 22px;
+  line-height: 1.48;
+}
+
+.poster-metrics {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+  margin-top: 22px;
+}
+
+.poster-metric {
+  padding: 18px 12px;
+  border-radius: 20px;
+  background: rgba(244, 239, 232, 0.85);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.poster-metric strong {
+  display: block;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 54px;
+  line-height: 0.9;
+  color: var(--accent-dark);
+}
+
+.poster-metric span {
+  display: block;
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.poster-insight-list {
+  margin-top: 22px;
+  display: grid;
+  gap: 12px;
+}
+
+.poster-insight {
+  display: grid;
+  grid-template-columns: 56px 1fr;
+  gap: 14px;
+  padding: 16px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  border: 1px solid var(--line);
+}
+
+.poster-insight span {
+  display: grid;
+  place-items: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--text);
+  color: #fff;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 26px;
+}
+
+.poster-insight h3,
+.poster-flow-card h3 {
+  font-size: 28px;
+  color: var(--text);
+}
+
+.poster-insight p,
+.poster-flow-card p,
+.poster-timeline p,
+.poster-outcome p,
+.poster-footer-note p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 18px;
+  line-height: 1.48;
+}
+
+.poster-device {
+  margin-top: 22px;
+  display: flex;
+  justify-content: center;
+}
+
+.poster-flow-grid {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.poster-flow-card {
+  padding: 18px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.74);
+  border: 1px solid var(--line);
+}
+
+.poster-timeline {
+  margin-top: 18px;
+  display: grid;
+  gap: 10px;
+}
+
+.poster-timeline div {
+  padding: 16px 18px;
+  border-radius: 20px;
+  background: rgba(244, 239, 232, 0.85);
+  border: 1px solid var(--line);
+}
+
+.poster-timeline span {
+  display: inline-flex;
+  align-items: center;
+  min-height: 34px;
+  padding: 0 12px;
+  border-radius: 999px;
+  background: rgba(227, 106, 45, 0.14);
+  color: var(--accent-dark);
+  font-size: 15px;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+
+.poster-outcome,
+.poster-footer-note {
+  margin-top: 18px;
+  padding: 18px 20px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.72);
+  border: 1px solid var(--line);
+}
+
+.poster-footer-note strong {
+  color: var(--text);
+}
+
+.pitch-slide {
+  position: relative;
+  overflow: hidden;
+  padding: 38px 42px;
+  background:
+    radial-gradient(circle at 82% 18%, rgba(227, 106, 45, 0.12), transparent 18%),
+    linear-gradient(135deg, rgba(255, 252, 247, 0.98), rgba(247, 239, 229, 0.96));
+}
+
+.pitch-slide::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 10px;
+  background: linear-gradient(180deg, var(--accent-dark), var(--accent));
+}
+
+.pitch-copy {
+  gap: 20px;
+}
+
+.pitch-copy h1 {
+  max-width: 11ch;
+  font-size: clamp(3.8rem, 5.4vw, 5.5rem);
+}
+
+.pitch-lead {
+  max-width: 36ch;
+}
+
+.pitch-story-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.pitch-story-card {
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.76);
+  border: 1px solid var(--line);
+}
+
+.pitch-story-card strong {
+  display: block;
+  font-size: 0.86rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.pitch-story-card p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.96rem;
+  line-height: 1.42;
+}
+
+.pitch-proof-strip {
+  display: grid;
+  gap: 10px;
+}
+
+.pitch-proof {
+  display: grid;
+  grid-template-columns: 48px 1fr;
+  gap: 12px;
+  align-items: start;
+  padding: 14px 16px;
+  border-radius: 18px;
+  background: rgba(255, 247, 239, 0.9);
+  border: 1px solid rgba(227, 106, 45, 0.16);
+}
+
+.pitch-proof span {
+  display: grid;
+  place-items: center;
+  width: 48px;
+  height: 48px;
+  border-radius: 14px;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  color: white;
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 24px;
+}
+
+.pitch-proof strong {
+  display: block;
+  font-size: 1rem;
+  font-family: "Barlow Condensed", sans-serif;
+  text-transform: uppercase;
+}
+
+.pitch-proof p {
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.42;
+}
+
+.pitch-visual-stage {
+  position: relative;
+  display: grid;
+  justify-items: center;
+  gap: 16px;
+}
+
+.pitch-phone-clean {
+  width: min(100%, 336px);
+  transform: rotate(3deg);
+}
+
+.pitch-callout {
+  width: 100%;
+  max-width: 320px;
+  padding: 16px 18px;
+  border-radius: 20px;
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow);
+}
+
+.problem-callout {
+  justify-self: start;
+  background: rgba(255, 243, 232, 0.94);
+}
+
+.solution-callout {
+  justify-self: end;
+  background: rgba(241, 247, 238, 0.96);
+}
+
+.pitch-callout strong {
+  display: block;
+  font-size: 0.84rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.pitch-callout p {
+  margin-top: 8px;
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.45;
+}
