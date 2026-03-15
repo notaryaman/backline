@@ -376,6 +376,32 @@ h3 {
   opacity: 0.6;
 }
 
+.deliverable-links {
+  margin-top: auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.deliverable-links a {
+  margin-top: 0;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 40px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(227, 106, 45, 0.22);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.92), rgba(244, 239, 232, 0.96));
+  box-shadow: 0 10px 22px rgba(35, 29, 24, 0.08);
+}
+
+.deliverable-links a:hover {
+  opacity: 1;
+  transform: translateY(-1px);
+  box-shadow: 0 14px 28px rgba(35, 29, 24, 0.12);
+}
+
 /* Interactive features */
 
 /* Scroll reveal animations */
