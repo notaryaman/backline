@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backline GR6 Medium-Fi Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gr6.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="brief">
+        <p class="eyebrow">GR6 Medium-Fi Prototype</p>
+        <h1>Guided recovery flows for missing items, interruptions, and escalation.</h1>
+        <p class="summary">
+          Backline is a medium-fidelity prototype for retail fulfillment associates working under
+          timer pressure. This version reflects the GR6 brief: simple, moderate, and complex tasks,
+          revised interface changes from low-fi, and explicit prototype limitations.
+        </p>
+
+        <div class="summary-grid">
+          <div class="summary-card">
+            <p class="mini-head">Usability goals</p>
+            <ul>
+              <li>Reduce hesitation during uncertainty-heavy moments.</li>
+              <li>Make help-seeking feel fast and competent.</li>
+            </ul>
+          </div>
+          <div class="summary-card">
+            <p class="mini-head">Measured in testing</p>
+            <ul>
+              <li>Time to choose a recovery action</li>
+              <li>Navigation errors or dead ends</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="revisions">
+          <p class="mini-head">Major revisions from low-fi</p>
+          <div class="revision-list">
+            <div>Guidance and action now live on the same screen.</div>
+            <div>A persistent task context header survives interruptions.</div>
+            <div>Help requests are structured escalation cards with auto-filled context.</div>
+          </div>
+        </div>
+
+        <div class="task-buttons">
+          <button class="task-button" data-start="home">Start prototype</button>
+          <button class="task-button secondary" data-start="missing-support">Simple task</button>
+          <button class="task-button secondary" data-start="interrupt-mode">Moderate task</button>
+          <button class="task-button secondary" data-start="repeated-issue">Complex task</button>
+          <a class="task-link" href="readme.html">Open README</a>
+        </div>
+      </section>
+
+      <section class="device-wrap">
+        <div class="device">
+          <div class="device-top">
+            <span>9:41</span>
+            <span>Backline</span>
+            <span>GR6</span>
+          </div>
+
+          <div class="screen active" id="home">
+            <div class="context-header">
+              <div>
+                <p class="eyebrow small">Active order</p>
+                <h2>Order #1842</h2>
+              </div>
+              <div class="context-meta">
+                <span class="chip alert">Timer 6:42</span>
+                <span class="chip">Aisle 12</span>
+              </div>
+            </div>
+            <div class="card primary-card">
+              <p class="label">Current item</p>
+              <h3>Simple Truth Organic Almond Flour</h3>
+              <p>Expected location: Baking aisle, shelf B4</p>
+              <button data-next="item-detail">Open current item</button>
+            </div>
+            <div class="card">
+              <p class="label">Recovery shortcuts</p>
+              <div class="stack">
+                <button class="ghost" data-next="missing-support">Resolve missing item</button>
+                <button class="ghost" data-next="interrupt-mode">Pause for interruption</button>
+                <button class="ghost" data-next="repeated-issue">Escalate at-risk order</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="screen" id="item-detail">
+            <div class="topline">
+              <button class="back" data-next="home">Back</button>
+              <p>Item detail</p>
+            </div>
+            <div class="card">
+              <p class="label">Current context</p>
+              <div class="detail-row"><span>Item</span><strong>Organic almond flour</strong></div>
+              <div class="detail-row"><span>Order pace</span><strong>Behind target</strong></div>
+              <div class="detail-row"><span>Known issue</span><strong>Shelf appears empty</strong></div>
+            </div>
+            <div class="stack">
+              <button data-next="missing-support">Can't find item</button>
+              <button class="ghost" data-next="home">Return to dashboard</button>
+            </div>
+          </div>
+
+          <div class="screen" id="missing-support">
+            <div class="topline">
+              <button class="back" data-next="item-detail">Back</button>
+              <p>Missing item support</p>
+            </div>
+            <div class="card primary-card">
+              <p class="label">Recommended next actions</p>
+              <h3>Use the fastest safe next step.</h3>
+              <p>Guidance and action appear together so the user does not bounce across screens.</p>
+            </div>
+            <div class="stack">
+              <button class="ghost" data-next="alternate-location">Check alternate location</button>
+              <button class="ghost" data-next="substitute-options">Compare substitutes</button>
+              <button class="ghost" data-next="confirmation">Mark unavailable</button>
+            </div>
+          </div>
+
+          <div class="screen" id="alternate-location">
+            <div class="topline">
+              <button class="back" data-next="missing-support">Back</button>
+              <p>Alternate location</p>
+            </div>
+            <div class="card">
+              <p class="label">Store hint</p>
+              <h3>Check aisle 12 endcap display</h3>
+              <p>This item is often moved to the seasonal gluten-free display.</p>
+            </div>
+            <div class="stack">
+              <button data-next="confirmation">Found it</button>
+              <button class="ghost" data-next="substitute-options">Still missing</button>
+            </div>
+          </div>
+
+          <div class="screen" id="substitute-options">
+            <div class="topline">
+              <button class="back" data-next="missing-support">Back</button>
+              <p>Substitute options</p>
+            </div>
+            <div class="option-card">
+              <strong>Bob's Red Mill Almond Flour</strong>
+              <p>High match, same category, keeps gluten-free constraint intact.</p>
+            </div>
+            <div class="option-card muted-option">
+              <strong>Store Brand Almond Meal</strong>
+              <p>Lower confidence choice. Texture and use case may differ.</p>
+            </div>
+            <div class="stack">
+              <button data-next="confirmation">Choose best match</button>
+              <button class="ghost" data-next="escalation-request">Request supervisor input</button>
+            </div>
+          </div>
+
+          <div class="screen" id="interrupt-mode">
+            <div class="topline">
+              <button class="back" data-next="home">Back</button>
+              <p>Interruption mode</p>
+            </div>
+            <div class="card">
+              <p class="label">Pause current task</p>
+              <h3>Save order context before helping a customer.</h3>
+              <p>The persistent header and resume card are the main medium-fi change for this task.</p>
+            </div>
+            <div class="stack">
+              <button data-next="customer-help">Pause and help customer</button>
+            </div>
+          </div>
+
+          <div class="screen" id="customer-help">
+            <div class="topline">
+              <button class="back" data-next="interrupt-mode">Back</button>
+              <p>Customer help state</p>
+            </div>
+            <div class="card">
+              <p class="label">Order saved</p>
+              <div class="detail-row"><span>Last completed</span><strong>Whole wheat bread</strong></div>
+              <div class="detail-row"><span>Next item</span><strong>Frozen peas</strong></div>
+              <div class="detail-row"><span>Section</span><strong>Frozen aisle</strong></div>
+            </div>
+            <button data-next="resume-card">Return to order</button>
+          </div>
+
+          <div class="screen" id="resume-card">
+            <div class="topline">
+              <button class="back" data-next="customer-help">Back</button>
+              <p>Resume card</p>
+            </div>
+            <div class="card primary-card">
+              <p class="label">Welcome back</p>
+              <h3>Return to frozen aisle</h3>
+              <p>2 items left in this section. Frozen items are time-sensitive, so resume here first.</p>
+            </div>
+            <button data-next="home">Continue picking</button>
+          </div>
+
+          <div class="screen" id="repeated-issue">
+            <div class="topline">
+              <button class="back" data-next="home">Back</button>
+              <p>At-risk order</p>
+            </div>
+            <div class="card">
+              <p class="label">Repeated issue prompt</p>
+              <div class="detail-row"><span>Missing items</span><strong>3</strong></div>
+              <div class="detail-row"><span>Timer state</span><strong>4:12 remaining</strong></div>
+              <div class="detail-row"><span>Need</span><strong>Supervisor decision</strong></div>
+            </div>
+            <button data-next="escalation-request">Build escalation card</button>
+          </div>
+
+          <div class="screen" id="escalation-request">
+            <div class="topline">
+              <button class="back" data-next="repeated-issue">Back</button>
+              <p>Escalation request</p>
+            </div>
+            <div class="card primary-card">
+              <p class="label">Auto-filled context</p>
+              <div class="detail-row"><span>Item</span><strong>Organic almond flour</strong></div>
+              <div class="detail-row"><span>Aisle</span><strong>12 · Baking</strong></div>
+              <div class="detail-row"><span>Timer</span><strong>4:12 remaining</strong></div>
+              <div class="detail-row"><span>Issue</span><strong>Risky substitute needed</strong></div>
+            </div>
+            <button data-next="waiting-state">Send request</button>
+          </div>
+
+          <div class="screen" id="waiting-state">
+            <div class="topline">
+              <button class="back" data-next="escalation-request">Back</button>
+              <p>Waiting state</p>
+            </div>
+            <div class="card">
+              <p class="label">Supervisor notified</p>
+              <h3>Request sent</h3>
+              <p>This medium-fi state uses pre-authored responses rather than live data.</p>
+            </div>
+            <button data-next="supervisor-response">View response</button>
+          </div>
+
+          <div class="screen" id="supervisor-response">
+            <div class="topline">
+              <button class="back" data-next="waiting-state">Back</button>
+              <p>Supervisor reply</p>
+            </div>
+            <div class="card primary-card">
+              <p class="label">Response received</p>
+              <h3>Use Bob's Red Mill Almond Flour</h3>
+              <p>Closest category match. Avoid almond meal for baking-sensitive orders.</p>
+            </div>
+            <button data-next="confirmation">Apply recommendation</button>
+          </div>
+
+          <div class="screen" id="confirmation">
+            <div class="topline">
+              <button class="back" data-next="home">Back</button>
+              <p>Confirmation</p>
+            </div>
+            <div class="card primary-card">
+              <p class="label">Action complete</p>
+              <h3>Return to run</h3>
+              <p>The prototype now routes the user back into the order instead of leaving them in a dead end.</p>
+            </div>
+            <button data-next="recap">Finish sample flow</button>
+          </div>
+
+          <div class="screen" id="recap">
+            <div class="topline">
+              <button class="back" data-next="home">Back</button>
+              <p>End-of-run recap</p>
+            </div>
+            <div class="card">
+              <p class="label">Prototype limitations</p>
+              <ul class="recap-list">
+                <li>Inventory is hard-coded to sample items.</li>
+                <li>Supervisor responses are pre-authored.</li>
+                <li>Timer changes are simulated, not real-time.</li>
+                <li>Store map hints are illustrative only.</li>
+              </ul>
+            </div>
+            <a class="button-link" href="readme.html">Read prototype notes</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="gr6.js"></script>
+  </body>
+</html>

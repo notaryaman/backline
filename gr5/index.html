@@ -1,0 +1,253 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backline GR5 Low-Fi Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gr5.css" />
+  </head>
+  <body>
+    <main class="board">
+      <header class="hero">
+        <div>
+          <p class="eyebrow">GR5 Low-Fi Prototype + Testing</p>
+          <h1>Paper-first recovery flows for retail fulfillment under timer pressure.</h1>
+          <p class="lead">
+            This low-fi deliverable follows the GR5 assignment structure: solution realizations,
+            top concepts, paper prototype task flows, testing plan, and no fabricated results.
+          </p>
+        </div>
+        <div class="hero-note">
+          <p class="note-label">Final direction</p>
+          <p>Phone app as the primary interface, with a watch companion for glanceable interruption support.</p>
+        </div>
+      </header>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Early Ideas</p>
+          <h2>10-15 realization directions explored before narrowing.</h2>
+        </div>
+        <div class="idea-cloud">
+          <span>Phone-first support app</span>
+          <span>Watch companion</span>
+          <span>Earbud prompts</span>
+          <span>Cart-mounted display</span>
+          <span>Scanner guidance add-on</span>
+          <span>Micro-training cards</span>
+          <span>Store map overlay</span>
+          <span>Escalation board</span>
+          <span>Confidence-check flow</span>
+          <span>Interruption bookmark mode</span>
+          <span>Haptic urgency cues</span>
+          <span>Customer script library</span>
+          <span>Recovery checklist</span>
+          <span>Peer-tip layer</span>
+          <span>Shift summary</span>
+        </div>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Top 3</p>
+          <h2>Three realizations selected to sketch and compare.</h2>
+        </div>
+        <div class="concept-grid">
+          <article class="concept-card">
+            <p class="card-tag">A</p>
+            <h3>Phone app</h3>
+            <p>Best for multi-step guidance, substitute decisions, and escalation details.</p>
+            <div class="paper phone-paper">
+              <div class="paper-top"></div>
+              <div class="paper-line short"></div>
+              <div class="paper-line"></div>
+              <div class="paper-line"></div>
+              <div class="paper-button"></div>
+            </div>
+          </article>
+          <article class="concept-card">
+            <p class="card-tag">B</p>
+            <h3>Watch companion</h3>
+            <p>Strong for quick interruption recovery and socially low-friction prompts.</p>
+            <div class="paper watch-paper">
+              <div class="paper-watch-face">
+                <div class="paper-line short"></div>
+                <div class="paper-line"></div>
+              </div>
+            </div>
+          </article>
+          <article class="concept-card">
+            <p class="card-tag">C</p>
+            <h3>Cart display</h3>
+            <p>Visible shared guidance, but less personal and less discreet in the middle of a run.</p>
+            <div class="paper cart-paper">
+              <div class="paper-line short"></div>
+              <div class="paper-line"></div>
+              <div class="paper-line"></div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split">
+        <article class="panel">
+          <div class="section-head">
+            <p class="eyebrow">Top 2</p>
+            <h2>Final realizations selected to flesh out.</h2>
+          </div>
+          <div class="decision-list">
+            <div>
+              <h3>Phone app</h3>
+              <p>Richer information density, easier onboarding, and strongest fit for multi-step recovery decisions.</p>
+            </div>
+            <div>
+              <h3>Watch companion</h3>
+              <p>Fast glanceability for interruptions and escalation prompts, but limited as a standalone decision tool.</p>
+            </div>
+          </div>
+        </article>
+        <article class="panel">
+          <div class="section-head">
+            <p class="eyebrow">Pros / Cons</p>
+            <h2>Why the phone-first direction won.</h2>
+          </div>
+          <div class="pros-cons">
+            <div>
+              <p class="mini-head">Pros</p>
+              <ul>
+                <li>Stronger support for complex missing-item flows</li>
+                <li>Better fit for substitute comparison and escalation context</li>
+                <li>Easier to prototype and test in paper form</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-head">Cons</p>
+              <ul>
+                <li>Potentially slower to access during active picking</li>
+                <li>Higher visual demand during interruptions</li>
+                <li>Can feel like extra work if too many steps are exposed</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section">
+        <div class="section-head">
+          <p class="eyebrow">Low-Fi Task Flows</p>
+          <h2>Simple, moderate, and complex flows required by GR5.</h2>
+        </div>
+        <div class="flow-grid">
+          <article class="flow-card">
+            <p class="flow-level">Simple</p>
+            <h3>Missing-item decision</h3>
+            <p>User cannot find an item, opens Backline, checks likely next actions, and completes a safe recovery.</p>
+            <div class="sketch-strip">
+              <div class="sketch-card">Shelf empty</div>
+              <div class="sketch-card">Open support</div>
+              <div class="sketch-card">Choose next step</div>
+            </div>
+          </article>
+          <article class="flow-card">
+            <p class="flow-level">Moderate</p>
+            <h3>Interruption and resume</h3>
+            <p>User pauses for a customer interruption, then resumes with cart state, order status, and next item intact.</p>
+            <div class="sketch-strip">
+              <div class="sketch-card">Pause order</div>
+              <div class="sketch-card">Help customer</div>
+              <div class="sketch-card">Resume card</div>
+            </div>
+          </article>
+          <article class="flow-card">
+            <p class="flow-level">Complex</p>
+            <h3>At-risk order escalation</h3>
+            <p>User handles multiple missing items, requests supervisor help with bundled context, and closes the order.</p>
+            <div class="sketch-strip">
+              <div class="sketch-card">Repeated issue</div>
+              <div class="sketch-card">Escalation</div>
+              <div class="sketch-card">Finish order</div>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section class="section split">
+        <article class="panel">
+          <div class="section-head">
+            <p class="eyebrow">Construction</p>
+            <h2>How the paper prototype would be built and run.</h2>
+          </div>
+          <ul class="detail-list">
+            <li>Printer paper or cardstock for core device screens</li>
+            <li>Sticky overlays for modal states and confirmations</li>
+            <li>Index cards for alternate branches and supervisor responses</li>
+            <li>Phone frame and watch frame templates for realism</li>
+            <li>Team roles: facilitator, computer, observer / note-taker</li>
+          </ul>
+        </article>
+        <article class="panel">
+          <div class="section-head">
+            <p class="eyebrow">Testing Plan</p>
+            <h2>Usability goals and measurements from the GR5 brief.</h2>
+          </div>
+          <div class="test-grid">
+            <div>
+              <p class="mini-head">Goals</p>
+              <ul>
+                <li>Recover from interruptions without asking what to do next</li>
+                <li>Complete help-seeking and missing-item flows with low hesitation</li>
+              </ul>
+            </div>
+            <div>
+              <p class="mini-head">Measures</p>
+              <ul>
+                <li>Prompts or questions asked during each task</li>
+                <li>Time to complete each flow</li>
+                <li>Wrong turns or backtracks</li>
+                <li>Self-reported confidence</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </section>
+
+      <section class="section split">
+        <article class="panel">
+          <div class="section-head">
+            <p class="eyebrow">Testing Script</p>
+            <h2>Three paper-prototype tasks to run with users.</h2>
+          </div>
+          <div class="script-stack">
+            <div><strong>Task 1</strong><p>You are picking an order and the item is not on the shelf. Show me what you would do.</p></div>
+            <div><strong>Task 2</strong><p>You are interrupted by a customer while in the middle of an order. Help the customer, then continue your task.</p></div>
+            <div><strong>Task 3</strong><p>Your order is behind pace, multiple items are unavailable, and you need help. Show me how you would finish.</p></div>
+          </div>
+        </article>
+        <article class="panel warning-panel">
+          <div class="section-head">
+            <p class="eyebrow">Results + Incidents</p>
+            <h2>Reserved for real testing evidence only.</h2>
+          </div>
+          <p>
+            The GR5 brief explicitly requires real user tests and real critical incidents. This page
+            leaves that section as a structured placeholder rather than inventing participants or outcomes.
+          </p>
+          <div class="incident-template">
+            <span>Task</span>
+            <span>What happened</span>
+            <span>Positive / negative</span>
+            <span>Severity 0-4</span>
+            <span>Quote / evidence</span>
+            <span>Design implication</span>
+          </div>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
