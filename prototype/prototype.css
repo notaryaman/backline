@@ -1,0 +1,362 @@
+:root {
+  --bg: #f5efe8;
+  --surface: #fffbf6;
+  --surface-alt: #f0e8de;
+  --text: #1c2626;
+  --muted: #61706d;
+  --line: rgba(28, 38, 38, 0.12);
+  --accent: #ea6f2c;
+  --accent-dark: #bd5018;
+  --good: #6b9663;
+  --shadow: 0 24px 50px rgba(40, 28, 18, 0.12);
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Manrope", sans-serif;
+  color: var(--text);
+  background:
+    radial-gradient(circle at top left, rgba(234, 111, 44, 0.16), transparent 28%),
+    linear-gradient(180deg, #f8f4ed 0%, var(--bg) 50%, #eee5da 100%);
+}
+
+.shell {
+  width: min(1180px, calc(100% - 32px));
+  margin: 0 auto;
+  padding: 40px 0;
+  display: grid;
+  grid-template-columns: minmax(300px, 1fr) minmax(340px, 420px);
+  gap: 36px;
+  align-items: center;
+}
+
+.eyebrow,
+.label {
+  margin: 0;
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--accent-dark);
+}
+
+.brief h1,
+.screen h2,
+.screen h3 {
+  font-family: "Barlow Condensed", sans-serif;
+  margin: 0;
+  letter-spacing: 0.01em;
+  text-transform: uppercase;
+}
+
+.brief h1 {
+  font-size: clamp(3rem, 5vw, 4.8rem);
+  line-height: 0.94;
+  max-width: 10ch;
+  margin-top: 14px;
+}
+
+.brief p:not(.eyebrow) {
+  max-width: 56ch;
+  color: var(--muted);
+  line-height: 1.7;
+}
+
+.flow-list {
+  display: grid;
+  gap: 12px;
+  margin-top: 24px;
+}
+
+.flow-item {
+  display: grid;
+  gap: 4px;
+  padding: 14px 16px;
+  border: 1px solid var(--line);
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.55);
+  box-shadow: var(--shadow);
+}
+
+.flow-item strong {
+  font-size: 0.95rem;
+}
+
+.flow-item span {
+  color: var(--muted);
+  line-height: 1.5;
+  font-size: 0.95rem;
+}
+
+.demo-buttons {
+  display: flex;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.demo-link,
+button {
+  appearance: none;
+  border: 0;
+  cursor: pointer;
+  min-height: 48px;
+  border-radius: 16px;
+  padding: 0 16px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: white;
+  background: linear-gradient(135deg, var(--accent), var(--accent-dark));
+  box-shadow: var(--shadow);
+}
+
+.demo-link.secondary,
+.ghost,
+.secondary-button,
+.back {
+  color: var(--text);
+  background: rgba(255, 255, 255, 0.66);
+  border: 1px solid var(--line);
+  box-shadow: none;
+}
+
+.device-wrap {
+  display: flex;
+  justify-content: center;
+}
+
+.brief {
+  align-self: start;
+  padding-top: 18px;
+}
+
+.device {
+  width: 390px;
+  min-height: 800px;
+  padding: 14px;
+  border-radius: 36px;
+  background: #181c1d;
+  box-shadow: 0 28px 60px rgba(20, 17, 13, 0.28);
+}
+
+.device-top {
+  display: flex;
+  justify-content: space-between;
+  padding: 8px 10px 14px;
+  color: rgba(255, 255, 255, 0.84);
+  font-size: 0.84rem;
+}
+
+.screen {
+  display: none;
+  min-height: 744px;
+  padding: 18px;
+  border-radius: 28px;
+  background:
+    radial-gradient(circle at top right, rgba(234, 111, 44, 0.1), transparent 24%),
+    var(--surface);
+}
+
+.screen.active {
+  display: block;
+}
+
+.screen-head {
+  display: grid;
+  gap: 10px;
+}
+
+.screen h2 {
+  font-size: 2rem;
+  line-height: 0.96;
+}
+
+.screen h3 {
+  font-size: 1.35rem;
+  line-height: 1;
+}
+
+.chips {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.chip,
+.tag {
+  display: inline-flex;
+  align-items: center;
+  min-height: 30px;
+  padding: 0 10px;
+  border-radius: 999px;
+  font-size: 0.78rem;
+  font-weight: 800;
+  background: rgba(28, 38, 38, 0.08);
+}
+
+.chip.alert,
+.tag {
+  color: var(--accent-dark);
+  background: rgba(234, 111, 44, 0.14);
+}
+
+.tag.safe {
+  color: var(--good);
+  background: rgba(107, 150, 99, 0.14);
+}
+
+.progress-card,
+.card,
+.product-card,
+.option-card,
+.success-card {
+  border: 1px solid var(--line);
+  background: rgba(255, 255, 255, 0.7);
+  border-radius: 24px;
+  padding: 16px;
+  margin-top: 14px;
+}
+
+.focus {
+  background: linear-gradient(180deg, rgba(255, 243, 232, 0.94), rgba(255, 255, 255, 0.88));
+}
+
+.progress-meta,
+.detail-row,
+.topline,
+.item {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.progress-meta,
+.detail-row,
+.topline,
+.small-note,
+.item,
+.card p,
+.product-card p,
+.success-card p,
+.option-card p {
+  color: var(--muted);
+  line-height: 1.5;
+}
+
+.progress-bar {
+  margin-top: 12px;
+  width: 100%;
+  height: 10px;
+  border-radius: 999px;
+  background: rgba(28, 38, 38, 0.08);
+  overflow: hidden;
+}
+
+.progress-bar span {
+  display: block;
+  width: 62%;
+  height: 100%;
+  border-radius: inherit;
+  background: linear-gradient(90deg, var(--accent), #f19f53);
+}
+
+.success-fill {
+  width: 74% !important;
+  background: linear-gradient(90deg, var(--good), #89b57c) !important;
+}
+
+.stack {
+  display: grid;
+  gap: 10px;
+  margin-top: 14px;
+}
+
+.topline {
+  align-items: center;
+  margin-bottom: 6px;
+}
+
+.topline p {
+  margin: 0;
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.card h3,
+.product-card h3,
+.success-card h3,
+.option-card h3 {
+  margin-top: 8px;
+}
+
+.back {
+  min-height: 36px;
+  padding: 0 12px;
+  border-radius: 12px;
+  font-size: 0.85rem;
+}
+
+.list-card .item + .item {
+  margin-top: 10px;
+  padding-top: 10px;
+  border-top: 1px solid var(--line);
+}
+
+.item.current {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.item.done {
+  opacity: 0.7;
+}
+
+.product-card {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 14px;
+  align-items: center;
+}
+
+.product-image {
+  display: grid;
+  place-items: center;
+  min-height: 110px;
+  border-radius: 18px;
+  background: var(--surface-alt);
+  font-family: "Barlow Condensed", sans-serif;
+  font-size: 1.5rem;
+  line-height: 0.95;
+  text-align: center;
+  color: var(--accent-dark);
+}
+
+.option-card {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+button {
+  width: 100%;
+}
+
+@media (max-width: 900px) {
+  .shell {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
+  .brief {
+    width: min(100%, 680px);
+    padding-top: 0;
+  }
+}

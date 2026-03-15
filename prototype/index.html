@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backline Prototype</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="prototype.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <section class="brief">
+        <p class="eyebrow">Backline High-Fi Prototype</p>
+        <h1>In-the-moment support for retail fulfillment when the floor gets hectic.</h1>
+        <p>
+          Backline helps newer fulfillment associates recover from missing items, ask for help
+          with context, and resume work after interruptions without losing pace.
+        </p>
+        <div class="flow-list">
+          <div class="flow-item">
+            <strong>Task 1</strong>
+            <span>Recover when an item is missing.</span>
+          </div>
+          <div class="flow-item">
+            <strong>Task 2</strong>
+            <span>Escalate quickly with the right context.</span>
+          </div>
+          <div class="flow-item">
+            <strong>Task 3</strong>
+            <span>Pause and resume after a customer interruption.</span>
+          </div>
+        </div>
+        <div class="demo-buttons">
+          <button class="demo-link" data-start="home">Start walkthrough</button>
+          <button class="demo-link secondary" data-start="missing-item">Open missing-item task</button>
+          <button class="demo-link secondary" data-start="escalation-request">Open escalation task</button>
+          <button class="demo-link secondary" data-start="interrupt-mode">Open interruption task</button>
+        </div>
+      </section>
+
+      <section class="device-wrap">
+        <div class="device">
+          <div class="device-top">
+            <span>9:41</span>
+            <span>Backline</span>
+            <span>100%</span>
+          </div>
+
+          <div class="screen active" id="home">
+            <div class="screen-head">
+              <p class="eyebrow">Active Order</p>
+              <h2>Order #1842</h2>
+              <div class="chips">
+                <span class="chip alert">Timer low</span>
+                <span class="chip">Aisle 12</span>
+              </div>
+            </div>
+            <div class="progress-card">
+              <div class="progress-meta">
+                <span>6 / 11 items picked</span>
+                <span>6:42 remaining</span>
+              </div>
+              <div class="progress-bar"><span></span></div>
+            </div>
+            <div class="card focus">
+              <p class="label">Current item</p>
+              <h3>Simple Truth Organic Almond Flour</h3>
+              <p>Expected location: Baking aisle · Shelf B4</p>
+              <button data-next="order">Open current item</button>
+            </div>
+            <div class="card">
+              <p class="label">Quick actions</p>
+              <div class="stack">
+                <button class="ghost" data-next="missing-item">I can't find this item</button>
+                <button class="ghost" data-next="escalation-request">Ask a lead for help</button>
+                <button class="ghost" data-next="interrupt-mode">Pause for customer help</button>
+              </div>
+            </div>
+          </div>
+
+          <div class="screen" id="order">
+            <div class="topline">
+              <button class="back" data-next="home">Back</button>
+              <p>Current task list</p>
+            </div>
+            <div class="card list-card">
+              <p class="label">Remaining items</p>
+              <div class="item done"><span>Frozen peas</span><span>Picked</span></div>
+              <div class="item done"><span>Whole wheat bread</span><span>Picked</span></div>
+              <div class="item current"><span>Organic almond flour</span><span>Current</span></div>
+              <div class="item"><span>Gluten-free pasta</span><span>Next</span></div>
+              <div class="item"><span>Honeycrisp apples</span><span>Later</span></div>
+            </div>
+            <button data-next="item-detail">Open item detail</button>
+          </div>
+
+          <div class="screen" id="item-detail">
+            <div class="topline">
+              <button class="back" data-next="order">Back</button>
+              <p>Item detail</p>
+            </div>
+            <div class="product-card">
+              <div class="product-image">ALMOND<br />FLOUR</div>
+              <div>
+                <h3>Simple Truth Organic Almond Flour</h3>
+                <p>16 oz · Gluten-free baking</p>
+                <p>Expected shelf: B4</p>
+              </div>
+            </div>
+            <div class="stack">
+              <button class="secondary-button" data-next="success">Item found</button>
+              <button data-next="missing-item">Can't find item</button>
+            </div>
+          </div>
+
+          <div class="screen" id="missing-item">
+            <div class="topline">
+              <button class="back" data-next="item-detail">Back</button>
+              <p>Decision support</p>
+            </div>
+            <div class="card focus">
+              <p class="label">Can't find this item?</p>
+              <h3>Backline can help you recover quickly.</h3>
+              <p>Use the fastest safe next step instead of guessing or over-searching.</p>
+            </div>
+            <div class="stack">
+              <button class="ghost" data-next="alt-location">Check alternate location</button>
+              <button class="ghost" data-next="substitutes">Compare substitute options</button>
+              <button class="ghost" data-next="escalation-request">Ask a lead</button>
+              <button class="ghost" data-next="success">Mark unavailable</button>
+            </div>
+          </div>
+
+          <div class="screen" id="alt-location">
+            <div class="topline">
+              <button class="back" data-next="missing-item">Back</button>
+              <p>Location hint</p>
+            </div>
+            <div class="card">
+              <p class="label">Likely alternate location</p>
+              <h3>Check aisle 12 endcap display</h3>
+              <p>Lead notes show this item is often stocked on the seasonal baking display.</p>
+            </div>
+            <div class="stack">
+              <button class="secondary-button" data-next="success">Found it</button>
+              <button data-next="substitutes">Still missing</button>
+            </div>
+          </div>
+
+          <div class="screen" id="substitutes">
+            <div class="topline">
+              <button class="back" data-next="missing-item">Back</button>
+              <p>Substitute options</p>
+            </div>
+            <div class="option-card">
+              <div>
+                <h3>Bob's Red Mill Almond Flour</h3>
+                <p>High match · Same category · Gluten-free</p>
+              </div>
+              <span class="tag safe">Best match</span>
+            </div>
+            <div class="option-card">
+              <div>
+                <h3>Store Brand Almond Meal</h3>
+                <p>Lower match · Texture may differ</p>
+              </div>
+              <span class="tag">Higher risk</span>
+            </div>
+            <div class="stack">
+              <button class="secondary-button" data-next="success">Choose best match</button>
+              <button data-next="escalation-request">Request second opinion</button>
+            </div>
+          </div>
+
+          <div class="screen" id="escalation-request">
+            <div class="topline">
+              <button class="back" data-next="substitutes">Back</button>
+              <p>Escalation</p>
+            </div>
+            <div class="card">
+              <p class="label">Need a second opinion</p>
+              <div class="detail-row"><span>Item</span><strong>Organic almond flour</strong></div>
+              <div class="detail-row"><span>Aisle</span><strong>12 · Baking</strong></div>
+              <div class="detail-row"><span>Timer state</span><strong>6:42 remaining</strong></div>
+              <div class="detail-row"><span>Issue</span><strong>Risky gluten-free substitute</strong></div>
+            </div>
+            <button data-next="supervisor-response">Send request</button>
+          </div>
+
+          <div class="screen" id="supervisor-response">
+            <div class="topline">
+              <button class="back" data-next="escalation-request">Back</button>
+              <p>Supervisor response</p>
+            </div>
+            <div class="card focus">
+              <p class="label">Response received</p>
+              <h3>Use Bob's Red Mill Almond Flour</h3>
+              <p>Closest category match. Avoid almond meal for baking-sensitive orders.</p>
+            </div>
+            <div class="stack">
+              <button class="secondary-button" data-next="success">Apply recommendation</button>
+              <button class="ghost" data-next="supervisor-why">Why this recommendation?</button>
+            </div>
+          </div>
+
+          <div class="screen" id="supervisor-why">
+            <div class="topline">
+              <button class="back" data-next="supervisor-response">Back</button>
+              <p>Why this choice</p>
+            </div>
+            <div class="card">
+              <p class="label">Decision rationale</p>
+              <p>
+                This substitute preserves the gluten-free requirement and matches how the product is typically used.
+              </p>
+              <p class="small-note">Backline stores this explanation so newer workers learn from the escalation.</p>
+            </div>
+            <button data-next="success">Apply recommendation</button>
+          </div>
+
+          <div class="screen" id="interrupt-mode">
+            <div class="topline">
+              <button class="back" data-next="home">Back</button>
+              <p>Interruption</p>
+            </div>
+            <div class="card focus">
+              <p class="label">Customer needs help?</p>
+              <h3>Pause and bookmark this order.</h3>
+              <p>Backline saves your current state so you can return without rebuilding the order from memory.</p>
+            </div>
+            <div class="stack">
+              <button data-next="paused-state">Pause and bookmark</button>
+              <button class="ghost" data-next="home">Keep picking</button>
+            </div>
+          </div>
+
+          <div class="screen" id="paused-state">
+            <div class="topline">
+              <button class="back" data-next="interrupt-mode">Back</button>
+              <p>Paused order</p>
+            </div>
+            <div class="card">
+              <p class="label">Saved context</p>
+              <div class="detail-row"><span>Order</span><strong>#1842</strong></div>
+              <div class="detail-row"><span>Last completed</span><strong>Whole wheat bread</strong></div>
+              <div class="detail-row"><span>Next item</span><strong>Frozen peas</strong></div>
+              <div class="detail-row"><span>Section</span><strong>Frozen aisle</strong></div>
+            </div>
+            <button data-next="resume-card">Resume order</button>
+          </div>
+
+          <div class="screen" id="resume-card">
+            <div class="topline">
+              <button class="back" data-next="paused-state">Back</button>
+              <p>Resume</p>
+            </div>
+            <div class="card focus">
+              <p class="label">Welcome back</p>
+              <h3>Return to frozen aisle</h3>
+              <p>Frozen items are time-sensitive. Resume with 2 items left in this section.</p>
+            </div>
+            <button data-next="success">Continue picking</button>
+          </div>
+
+          <div class="screen" id="success">
+            <div class="topline">
+              <button class="back" data-next="home">Back</button>
+              <p>Order status</p>
+            </div>
+            <div class="success-card">
+              <p class="label">Order back on track</p>
+              <h3>Next step confirmed</h3>
+              <p>You resolved the issue without losing the order state.</p>
+              <div class="progress-card">
+                <div class="progress-meta">
+                  <span>7 / 11 items picked</span>
+                  <span>6:10 remaining</span>
+                </div>
+                <div class="progress-bar"><span class="success-fill"></span></div>
+              </div>
+            </div>
+            <div class="stack">
+              <button data-next="home">Return home</button>
+              <button class="ghost" data-next="order">View order</button>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script src="prototype.js"></script>
+  </body>
+</html>
