@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Backline GR10 Final Report</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@500;700&family=Manrope:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="gr10.css" />
+  </head>
+  <body>
+    <main class="report-shell">
+      <header class="report-hero">
+        <div>
+          <p class="eyebrow">GR10 Final Report</p>
+          <h1>Backline</h1>
+          <p class="hero-subtitle">
+            Just-in-time support for retail fulfillment associates during missing items,
+            customer interruptions, and help-seeking under timer pressure.
+          </p>
+        </div>
+        <div class="hero-meta">
+          <p><strong>Team</strong></p>
+          <p>Aryaman Singh</p>
+          <p>Kushagra Kanaujia</p>
+          <p class="meta-spacer"><strong>Roles</strong></p>
+          <p>Aryaman: needfinding, interaction design, prototyping</p>
+          <p>Kushagra: research synthesis, concept development, testing</p>
+        </div>
+      </header>
+
+      <article class="report-body">
+        <section class="report-section lead-section">
+          <p class="section-kicker">Project Summary</p>
+          <h2>Backline reframes frontline support as a recovery problem, not just a training problem.</h2>
+          <p>
+            Retail fulfillment associates are expected to move quickly, stay accurate, and stay calm
+            in public-facing environments. Our project began with a broad interest in stressful
+            service work, but narrowed into timer-driven retail fulfillment after we found that the
+            hardest moments were not routine task steps. The real breakdowns happened when an item
+            was missing, when a customer interruption broke context, or when asking for help felt
+            socially costly.
+          </p>
+          <p>
+            Backline is a shift support tool that addresses those moments directly. Instead of adding
+            another passive training layer, it provides just-in-time guidance for missing-item
+            recovery, contextual escalation, and interruption recovery. Across the course, we used
+            needfinding, POV development, experience prototyping, low-fidelity exploration,
+            medium-fidelity interaction design, and high-fidelity refinement to move from a broad
+            opportunity space to a focused support concept for live work.
+          </p>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">Problem And Opportunity</p>
+          <h2>Formal training covers official workflow, but not judgment under pressure.</h2>
+          <p>
+            Our early research showed a recurring mismatch between how retail fulfillment is taught
+            and how it is actually performed. Workers are trained on scanner mechanics, order flow,
+            and official procedure, yet real performance depends on how they respond when the plan
+            breaks. Missing items, risky substitutions, customer interruptions, and uncertainty about
+            whether to escalate all create decision-making pressure that is mostly invisible to
+            formal training systems.
+          </p>
+          <p>
+            We also found that speed metrics can distort behavior. Workers are measured on pace, but
+            speed alone is not a full picture of competent performance. Under timer pressure,
+            workers sometimes optimize for completion at the cost of accuracy, confidence, or
+            customer experience. This suggested a design opportunity: create a support system that
+            helps workers recover quickly and accurately during live breakdown moments without making
+            them feel slowed down or incompetent.
+          </p>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">Needfinding</p>
+          <h2>We narrowed from broad service work to timer-driven retail fulfillment.</h2>
+          <p>
+            We conducted semi-structured interviews and used synthesis methods such as empathy maps
+            and cross-interview pattern analysis to identify recurring tensions. By GR2, the project
+            had narrowed to retail fulfillment, with one newer picker and one experienced
+            fulfillment lead serving as the core interview perspectives represented in our website
+            and deliverable materials.
+          </p>
+          <div class="insight-grid">
+            <article class="insight-card">
+              <h3>Training taught mechanics, not judgment.</h3>
+              <p>
+                Workers described learning official procedure, but not the practical heuristics
+                needed to make fast decisions when ambiguity appeared on the floor.
+              </p>
+            </article>
+            <article class="insight-card">
+              <h3>Help-seeking felt both operationally and socially costly.</h3>
+              <p>
+                Asking a supervisor for help could reduce pressure, but it also risked making the
+                worker feel slow, dependent, or visibly unsure.
+              </p>
+            </article>
+            <article class="insight-card">
+              <h3>Interruptions created real context loss.</h3>
+              <p>
+                When workers were pulled away to help customers, they often had to reconstruct the
+                order from memory, especially in time-sensitive sections.
+              </p>
+            </article>
+            <article class="insight-card">
+              <h3>Experience functioned like hidden expertise.</h3>
+              <p>
+                Experienced workers knew unofficial store patterns such as likely substitute
+                locations, common shelf errors, and escalation timing.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">POVs And Design Questions</p>
+          <h2>We framed the opportunity around confidence, pace, and recovery.</h2>
+          <p>
+            The strongest POV we carried forward focused on a newer retail fulfillment associate who
+            wants to keep pace and look competent, but needs fast support for ambiguous edge-case
+            decisions because formal training covers official process rather than real performance
+            under pressure.
+          </p>
+          <div class="question-list">
+            <div>
+              <strong>How might we help associates recover quickly from missing-item decisions without sacrificing timer performance?</strong>
+            </div>
+            <div>
+              <strong>How might we make asking a supervisor for help feel fast and competent instead of embarrassing?</strong>
+            </div>
+            <div>
+              <strong>How might we help workers resume a task after a customer interruption without losing context or confidence?</strong>
+            </div>
+          </div>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">Concept Exploration</p>
+          <h2>We explored multiple modalities before committing to a phone-first direction.</h2>
+          <p>
+            In our low-fidelity work, we compared several realizations of the same core idea. The
+            most promising options were a phone app for live shift support, a smartwatch companion
+            for glanceable interruption and escalation support, and a cart-mounted display that could
+            provide visible guidance during picking.
+          </p>
+          <p>
+            We selected the phone-first direction because it offered the best balance between
+            feasibility, information density, and support for multi-step recovery flows. The watch
+            concept remained valuable as an inspiration for glanceable interactions, but the phone
+            gave us enough space to combine decision support, escalation, and resume context in a
+            coherent medium-fidelity and high-fidelity experience.
+          </p>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">Task Set</p>
+          <h2>Three tasks anchored the design process from GR2 through GR10.</h2>
+          <div class="task-stack">
+            <article class="task-card">
+              <p class="task-level">Simple</p>
+              <h3>Resolve a missing item during an active pick run.</h3>
+              <p>
+                This task captures a frequent uncertainty-heavy moment and tests whether support can
+                be nearly frictionless.
+              </p>
+            </article>
+            <article class="task-card">
+              <p class="task-level">Moderate</p>
+              <h3>Pause for a customer interruption and resume the order with context intact.</h3>
+              <p>
+                This task focuses on context switching and memory recovery rather than a single
+                isolated decision.
+              </p>
+            </article>
+            <article class="task-card">
+              <p class="task-level">Complex</p>
+              <h3>Handle an at-risk order with multiple missing items, request supervisor help, and complete the run.</h3>
+              <p>
+                This task combines uncertainty, escalation, multiple decisions, and timer pressure in
+                one end-to-end flow.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">Design Evolution</p>
+          <h2>Each prototype pass reduced ambiguity in the highest-pressure moments.</h2>
+          <p>
+            Our design process moved from broad service-work support toward targeted recovery support
+            for retail fulfillment. The low-fidelity phase helped us compare modalities and surface
+            the tradeoff between glanceability and information density. It also forced us to define
+            the three canonical tasks more clearly.
+          </p>
+          <p>
+            The medium-fidelity phase focused on structure. We merged guidance and action on the same
+            screen so users did not have to bounce across multiple views to understand what to do.
+            We added a persistent task context header so interruptions would not erase the user’s
+            place in the order. We also converted generic help-seeking into structured escalation
+            cards with auto-filled context, reducing the burden of explaining the problem under
+            pressure.
+          </p>
+          <p>
+            The high-fidelity phase then refined hierarchy, clarity, and confidence. Primary actions
+            became more distinct from secondary actions. Confirmation states became more visible so
+            users would know when a recommendation or recovery step had actually been applied.
+            Overall, the design direction became less about generic training and more about guided
+            recovery in the exact moment of uncertainty.
+          </p>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">Final Solution</p>
+          <h2>Backline supports three breakdown moments: missing items, escalation, and interruption recovery.</h2>
+          <div class="solution-grid">
+            <article class="solution-card">
+              <h3>Missing-item recovery</h3>
+              <p>
+                Backline offers alternate-location hints, substitute guidance, and unavailable-item
+                fallbacks so workers can choose the fastest safe next step without over-searching.
+              </p>
+            </article>
+            <article class="solution-card">
+              <h3>Contextual escalation</h3>
+              <p>
+                Escalation requests automatically bundle item, aisle, timer state, and issue so that
+                asking for help feels efficient rather than competence-threatening.
+              </p>
+            </article>
+            <article class="solution-card">
+              <h3>Interruption resume</h3>
+              <p>
+                Resume cards preserve order state, next item, and section context so users can return
+                to the right task after helping a customer.
+              </p>
+            </article>
+          </div>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">Prototype Scope</p>
+          <h2>The final prototype uses hard-coded sample data to support the target tasks.</h2>
+          <p>
+            The prototype does not include backend integration or live store data. Instead, it uses
+            hard-coded sample orders, inventory states, escalation responses, and timer states so
+            users can complete the target flows without additional infrastructure. This scope let us
+            concentrate on interaction design rather than implementation complexity.
+          </p>
+          <p>
+            These limitations are acceptable for a course prototype because the core question is not
+            whether the system can connect to a store backend, but whether the interaction model
+            makes recovery feel faster, clearer, and more competent in the moment.
+          </p>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">AI Tools Used</p>
+          <h2>AI was used for writing support and structure, not for design evidence.</h2>
+          <p>
+            We used AI assistance to help organize written material and draft presentation-quality
+            copy. We did not use AI to fabricate participant data, heuristic-evaluation results,
+            usability findings, or any other empirical design evidence.
+          </p>
+        </section>
+
+        <section class="report-section">
+          <p class="section-kicker">Reflection</p>
+          <h2>Designing for frontline work required treating recovery as a first-class interaction.</h2>
+          <p>
+            One of the most important lessons from this project was that frontline work problems are
+            not only efficiency problems. They are also confidence, coordination, and context-recovery
+            problems. Missing items and interruptions look like small exceptions from the outside, but
+            for workers they are often the moments where performance, emotion, and customer service
+            collide.
+          </p>
+          <p>
+            Backline emerged from that insight. Rather than assuming workers simply needed more
+            training, the project focused on supporting the exact moments where knowledge breaks down
+            under pressure. If we continued this project, the next step would be broader real-world
+            evaluation across different store environments and a closer look at how supervisor-facing
+            tooling could complement the worker-facing flows.
+          </p>
+        </section>
+      </article>
+    </main>
+  </body>
+</html>
